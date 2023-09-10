@@ -1,11 +1,13 @@
 $(function(){
     
-    $("#btn-hide").click(function(){
-        $("#segundo").hide();
+    $(".primero").mouseenter(function(){
+        // $("#segundo").slideDown();
+        $("#segundo").fadeOut();
     });
 
-    $("#btn-show").click(function(){
-        $("#segundo").show();
+    $(".primero").mouseleave(function(){
+        // $("#segundo").slideUp();
+        $("#segundo").fadeIn();
     });
 
 });
