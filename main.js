@@ -1,7 +1,5 @@
-$(function(){
-    
-    $("#btn-hide").click(function(){
-        $(".primero, #segundo").html("Primero y Segundo");
-    });
+$(function () {
+
+    $("#lista > li").addClass("red");
 
 });
