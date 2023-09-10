@@ -1,7 +1,11 @@
 $(function(){
     
-    $("button").click(function(){
-        alert("Hola Mundo");
+    $("#btn-hide").click(function(){
+        $("#segundo").hide();
+    });
+
+    $("#btn-show").click(function(){
+        $("#segundo").show();
     });
 
 });
