@@ -1,13 +1,11 @@
 $(function(){
     
-    $(".primero").mouseenter(function(){
-        // $("#segundo").slideDown();
-        $("#segundo").fadeOut();
-    });
+    $("#btn-hide").click(function(){
+        
+        // alert($("#segundo").text());
+        // alert($("#segundo").html());
+        alert($("#segundo").attr("title"));
 
-    $(".primero").mouseleave(function(){
-        // $("#segundo").slideUp();
-        $("#segundo").fadeIn();
     });
 
 });
