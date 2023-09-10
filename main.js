@@ -1,16 +1,12 @@
 $(function(){
     
     $("#btn-hide").click(function(){
-        
-        // $("#segundo").remove();
-        $("#btn-show").empty();
-
+        $("h1").toggleClass("red");
+        // $("h1").addClass("red");
     });
 
     $("#btn-show").click(function(){
-        
-        $("#segundo").show();
-
+        $("h1").removeClass("red");
     });
 
 });
