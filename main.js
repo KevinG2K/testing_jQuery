@@ -1,0 +1,2 @@
+//sintaxis basica
+$("selector").accion
