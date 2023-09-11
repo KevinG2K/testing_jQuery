@@ -1,28 +1,27 @@
 $(function () {
-    //CSS selector
-    //var result = $('#humanos .hombre');
 
-    //Dom traversing
-    // var result = $('#humanos').find('.hombre');
+    //evento click directamente.
+    $('#parrafo').on('click', function(){
+        $(this).toggleClass('red');
+    });
 
-    //CSS selector
-    //var result = $('#humanos > div');
+    //delegacion de evento
+    $('#cuadrado').on('click', 'button.btn-color', function () {
+        $(this).parent().toggleClass('background-green');
+    });
 
-    //Dom traversing
-    // var result = $('#humanos').children('div');
-    // console.log(result);
+    //evento change
+    $('#contenedor').on('change', '#lista', function() {
+        var elemento = $('#lista option:selected');
+        var valor = elemento.val();
+        if (valor) {
+            $('#mensaje').html('Seleccionaste'+' '+valor);
+        }
+    });
 
-    //first(), last()
-    // $('#humanos').children().first().addClass('red');
-    // $('#humanos').children().last().addClass('yellow');
+    //evento del teclado
+    $('#input-text').on('keyup', 'input', function(){
+        $('#mensaje-input').html('Escribiendo: ' + $(this).val());
+    });
 
-    //prev(), next()
-    // $('#humanos').children().first().children()
-    // .last().prev().prev().addClass('red');
-    // $('#humanos').children().last().children()
-    // .first().next().next().addClass('yellow');
-
-    //para buscar elementos padres: parent(), parents()
-    $('#elegido').parents().addClass('red')
-    $('#elegida').parent().addClass('yellow')
 }); 
