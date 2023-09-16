@@ -1,27 +1,16 @@
 $(function () {
 
-    //evento click directamente.
-    $('#parrafo').on('click', function(){
-        $(this).toggleClass('red');
+    $('#contenedor').on('click', 'a', function(e) {
+        // metodo de jQuery para anular el comportamiento predeterminado
+        e.preventDefault();
+        // metodo de jQuery para impedir la propagacion de eventos
+        e.stopPropagation();
+        // console.log('esta redireccionando');
+        console.log('ahora no se redirecciona');
     });
 
-    //delegacion de evento
-    $('#cuadrado').on('click', 'button.btn-color', function () {
-        $(this).parent().toggleClass('background-green');
+    // este segundo evento es usado como ejemplo para el metodo stopPropagation()
+    $('#contenedor').on('click', function(e) {
+        console.log('click en el contenedor')
     });
-
-    //evento change
-    $('#contenedor').on('change', '#lista', function() {
-        var elemento = $('#lista option:selected');
-        var valor = elemento.val();
-        if (valor) {
-            $('#mensaje').html('Seleccionaste'+' '+valor);
-        }
-    });
-
-    //evento del teclado
-    $('#input-text').on('keyup', 'input', function(){
-        $('#mensaje-input').html('Escribiendo: ' + $(this).val());
-    });
-
 }); 
