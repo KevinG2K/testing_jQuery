@@ -11,11 +11,14 @@
 <body>
 
     <h1>Manipulacion del DOM</h1>
-    <h1>1. Prepend() y Append()</h1>
-    <div>
+    <!-- Estos elementos se insertan haciendo referencia
+        a un elemento que esta dentro del elemento principal (en este caso un contenedor) -->
+    <!-- No es como el caso anterior con Append y Prepend que se insertan fuera del elemento-->
+    <h1>1. After() y Before()</h1>
+    <div id="contenedor-agregar">
         <input type="text">
-        <button id="append">Append</button>
-        <button id="prepend">Prepend</button>
+        <button id="after">After</button>
+        <button id="before">Before</button>
     </div>
 
     <div id="contenedor-nombres">

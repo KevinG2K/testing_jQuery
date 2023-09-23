@@ -1,15 +1,15 @@
 $(function () {
 
-    $('#append').on('click', function(){
+    $('#after').on('click', function(){
         var value = $('#contenedor-agregar input').val();
         var html = '<div class="item"><li>'+value+'</li></div>'
-        $('#contenedor-nombres').append(html);
+        $('#contenedor-nombres').children().last().after(html);
     });
 
-    $('#prepend').on('click', function(){
+    $('#before').on('click', function(){
         var value = $('#contenedor-agregar input').val();
         var html = '<div class="item"><li>'+value+'</li></div>'
-        $('#contenedor-nombres').prepend(html);
+        $('#contenedor-nombres').children().first().before(html);
     });
 
 }); 
