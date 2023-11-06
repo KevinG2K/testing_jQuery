@@ -4,10 +4,9 @@ $(function () {
     $('.contenedor').on('click', 'a.div-href', function(e){
         e.preventDefault();
         // atravesando el DOM
-        // $(this).closest('.contenedor').find('.mas-info').show(1000);    //busca arriba el padre "contenedor", y luego de ahi busca el hijo "mas-info".
-                                                                        //puede tener un segundo parametro como una funcion para mostrar un alert
-                                                                        //despues que termina de ejecutarse los milisegundos definidos.
-        $(this).closest('.contenedor').find('.mas-info').toggle(1000);    //Esto muestra y oculta alternadamente.                                                                        
+        // $(this).closest('.contenedor').find('.mas-info').fadeIn(1000);  //Este efecto hace que el elemento se muestre de a poco.
+        // $(this).closest('.contenedor').find('.mas-info').fadeOut(1000);  //Este efecto hace que el elemento se oculte de a poco.
+        $(this).closest('.contenedor').find('.mas-info').fadeToggle(1000);  //Este efecto hace las dos cosas.
     });
     
 }); 
