@@ -1,3 +1,16 @@
-.mas-info {
-    display: none;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cuadrado {
+    background-color: rgb(57, 223, 57);
+    position: relative;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
